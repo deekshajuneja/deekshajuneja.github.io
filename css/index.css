@@ -188,7 +188,7 @@ h1{
     font-family: "Montserrat", sans-serif;
     font-weight: 900;
     /*font-size: 12.3125em;*/
-    font-size: 5vw;
+    font-size: 5vh;
     line-height: 0.3em;
     color: #f4f8fa;
     top: -0.3em;
@@ -504,7 +504,14 @@ h1{
 }
 .period .timeline-title {
     margin: 0;
-    font-size: 4vw;
+    font-size: 2vw;
+}
+
+@media only screen and (max-width: 768px) {
+	.period .timeline-title {
+
+		font-size: 4vw;
+	}
 }
 
 /*----------------------------------------------
@@ -739,7 +746,7 @@ sapn-icon break point */
 /*Projects*/
 
 
-.container {
+.project-container {
     max-width: 980px;
     margin: auto;
     padding: 2.2449%;
@@ -773,6 +780,7 @@ sapn-icon break point */
 .projects-content .project-label {
     display: block;
     margin: 5px 0 10px;
+	text-align: left;
 }
 .projects-content .current a {
     color: #000;
@@ -824,8 +832,9 @@ sapn-icon break point */
 }
 
 @media only screen and (max-width: 735px) {
-    .container {
+    .project-container {
         padding: 2.9932%;
+		padding-left: 15%
     }
 
     .projects-content {
@@ -837,8 +846,9 @@ sapn-icon break point */
     }
 }
 @media only screen and (max-width: 490px) {
-    .container {
+    .project-container {
         padding: 4.4898%;
+		padding-left: 15%
     }
 
     .projects-content {
@@ -854,6 +864,7 @@ sapn-icon break point */
         margin: 0;
     }
 }
+
 
 /*contact page*/
 
@@ -883,8 +894,8 @@ sapn-icon break point */
     background-color: #fff;
 }
 
-.twitter {
-    color: #4099FF;
+.linkedin{
+    color: #0077B5;
 }
 
 .facebook {
@@ -907,7 +918,7 @@ sapn-icon break point */
     color: #FFFFFF;
 }
 
-.twitter:hover {
+.linkedin:hover {
     background-color: #4099FF;
 }
 
@@ -915,9 +926,6 @@ sapn-icon break point */
     background-color: #3B5998;
 }
 
-.google-plus:hover {
-    background-color: #DB5A3C;
-}
 
 .instagram:hover {
     background-color: #5C3D2E;
