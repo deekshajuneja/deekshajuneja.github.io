@@ -521,6 +521,10 @@
                 const $datepicker = $(".js-datepicker");
                 let datepicker = $datepicker.datepicker({autoClose: true}).datepicker({});
             })
+            $('.dob').on('keydown paste', function(e){
+                e.preventDefault();
+            })
+
     </script>
     <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNxrC3M3TaPcSXqpEpKMAD6a8MVFW3oms">-->
     <!--</script>-->
