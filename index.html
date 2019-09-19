@@ -23,8 +23,27 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/css/datepicker.css" rel="stylesheet" type="text/css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/datepicker.min.js"></script>
+
+        <!-- Include English language -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/i18n/datepicker.en.js"></script>
+
+
    </head>
 <body data-spy="scroll" data-target="#navbar" data-offset="0">
+    <div class="row">
+        <div class="col-12">
+            <div class="form-group">
+                            <div class="input-group">
+                                <input class='js-datepicker form-control date dob' id='dob' name="dateOfBirth" data-language='en' autocomplete="new-dob" required />
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label>DOB</label>
+                            </div>
+                        </div>
+        </div>
+    </div>
     <div class="home-page">
         <div class="row">
             <div class="col-12 intro-name">
@@ -497,6 +516,11 @@
                 .find(".details")
                 .slideDown(200);
         });
+
+            $(function(){
+                const $datepicker = $(".js-datepicker");
+                let datepicker = $datepicker.datepicker({autoClose: true}).datepicker({});
+            })
     </script>
     <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNxrC3M3TaPcSXqpEpKMAD6a8MVFW3oms">-->
     <!--</script>-->
