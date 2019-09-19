@@ -28,6 +28,7 @@
 
         <!-- Include English language -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/air-datepicker/2.2.3/js/i18n/datepicker.en.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/moment.min.js"></script>
 
 
    </head>
@@ -36,12 +37,13 @@
         <div class="col-12">
             <div class="form-group">
                             <div class="input-group">
-                                <input class='js-datepicker form-control date dob' id='dob' name="dateOfBirth" data-language='en' autocomplete="new-dob" required />
+                                <input class='js-datepicker form-control date dob' id='dob' name="dateOfBirth" data-language='en' autocomplete="new-dob" readonly />
                                 <span class="highlight"></span>
                                 <span class="bar"></span>
                                 <label>DOB</label>
                             </div>
                         </div>
+                        <button id="testbtn">test</button>
         </div>
     </div>
     <div class="home-page">
@@ -521,8 +523,9 @@
                 const $datepicker = $(".js-datepicker");
                 let datepicker = $datepicker.datepicker({autoClose: true}).datepicker({});
             })
-            $('.dob').on('keydown paste', function(e){
-                e.preventDefault();
+            $('#testbtn').on('click', function(e){
+                console.log($('#dob').val());
+                alert(moment($('#dob').val(), "MM/DD/YYYY", true).isValid());
             })
 
     </script>
